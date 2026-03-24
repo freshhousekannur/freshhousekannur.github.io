@@ -56,6 +56,13 @@ section{padding:5.5rem 5vw}
 .pname{font-family:'Cormorant Garamond',serif;font-size:1.35rem;font-weight:400;color:var(--dark);margin-bottom:.7rem}
 .pdesc{font-size:.82rem;font-weight:300;line-height:1.75;color:var(--text-muted)}
 .pbadge{display:inline-block;margin-top:1.1rem;font-size:.58rem;letter-spacing:.2em;text-transform:uppercase;background:var(--cream);color:var(--gold-dark);padding:.3rem .85rem;border:1px solid var(--cream-dark)}
+/* Product image */
+.pc-img{width:100%;height:155px;object-fit:cover;display:block;margin-bottom:1.2rem;transition:transform .4s}
+.pc:hover .pc-img{transform:scale(1.04)}
+/* Cake mix flavour list */
+.cake-list{margin-top:.9rem;list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:.28rem .5rem}
+.cake-list li{display:flex;align-items:center;gap:.45rem;font-size:.75rem;font-weight:300;color:var(--text-muted)}
+.cake-list li::before{content:'✦';color:var(--gold);font-size:.45rem;flex-shrink:0}
 #hampers{background:var(--dark)}
 .hh{text-align:center;margin-bottom:3.5rem}
 .hh .stag{color:var(--gold)}
@@ -145,19 +152,18 @@ footer{background:var(--dark);padding:3rem 5vw 2rem;border-top:1px solid rgba(20
 .reveal{opacity:0;transform:translateY(28px);transition:opacity .8s ease,transform .8s ease}
 .reveal.visible{opacity:1;transform:none}
 @media(max-width:1000px){.hero-float{display:none}.about-in,.cin,.decor-in{grid-template-columns:1fr;gap:3rem}.hero-content{max-width:100%}}
-@media(max-width:600px){.nav-links{display:none}section{padding:3.5rem 5vw}.astats{grid-template-columns:1fr 1fr}.afeats{grid-template-columns:1fr 1fr}.dg{grid-template-columns:1fr 1fr}.occ-grid{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:600px){.nav-links{display:none}section{padding:3.5rem 5vw}.astats{grid-template-columns:1fr 1fr}.afeats{grid-template-columns:1fr 1fr}.dg{grid-template-columns:1fr 1fr}.occ-grid{grid-template-columns:repeat(3,1fr)}.cake-list{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
 
 <nav>
-  <a href="#" class="nav-logo" style="display:flex; align-items:center; gap:10px;">
-  <img src="https://raw.githubusercontent.com/freshhousekannur/freshhousekannur.github.io/a7ace5d138fcbfea62e6b9a2a4db34d72fb874c0/PHOTO-2026-03-24-10-48-11.jpg" 
-       alt="FreshHouse Logo" 
-       style="height:45px; width:auto; border-radius:6px;">
-  <span style="font-size:22px; font-weight:600;">Freshouse Kannur</span>
-</a>
-
+  <a href="#" class="nav-logo" style="display:flex;align-items:center;gap:10px;">
+    <img src="https://raw.githubusercontent.com/freshhousekannur/freshhousekannur.github.io/a7ace5d138fcbfea62e6b9a2a4db34d72fb874c0/PHOTO-2026-03-24-10-48-11.jpg"
+         alt="FreshHouse Logo"
+         style="height:45px;width:auto;border-radius:6px;">
+    <span style="font-size:22px;font-weight:600;">Freshouse Kannur</span>
+  </a>
   <ul class="nav-links">
     <li><a href="#products">Products</a></li>
     <li><a href="#hampers">Gift Hampers</a></li>
@@ -168,6 +174,7 @@ footer{background:var(--dark);padding:3rem 5vw 2rem;border-top:1px solid rgba(20
   </ul>
 </nav>
 
+<!-- HERO -->
 <section class="hero" id="home">
   <div class="hero-bg"></div>
   <div class="hero-pat"></div>
@@ -192,6 +199,7 @@ footer{background:var(--dark);padding:3rem 5vw 2rem;border-top:1px solid rgba(20
   </div>
 </section>
 
+<!-- MARQUEE -->
 <div class="mq-wrap">
   <div class="mq-track">
     <span class="mq-i">Premium Dry Fruits <span class="mq-d"></span></span>
@@ -213,6 +221,7 @@ footer{background:var(--dark);padding:3rem 5vw 2rem;border-top:1px solid rgba(20
   </div>
 </div>
 
+<!-- PRODUCTS -->
 <section id="products">
   <div style="text-align:center;margin-bottom:3rem" class="reveal">
     <span class="stag">Our Collection</span>
@@ -220,15 +229,96 @@ footer{background:var(--dark);padding:3rem 5vw 2rem;border-top:1px solid rgba(20
     <p style="font-size:.88rem;font-weight:300;color:var(--text-muted);margin-top:.9rem;max-width:460px;margin-inline:auto;line-height:1.8">From premium nuts to festive cake mixes &mdash; everything handpicked and packed fresh from Kannur.</p>
   </div>
   <div class="pg">
-    <div class="pc reveal"><span class="pe">&#x1FAD8;</span><span class="pcat">Dry Fruits</span><div class="pname">Premium Cashews</div><p class="pdesc">W240 grade whole cashews, roasted to golden perfection. Naturally creamy, rich, and beloved across Kerala.</p><span class="pbadge">Best Seller</span></div>
-    <div class="pc reveal"><span class="pe">&#x1F330;</span><span class="pcat">Dry Fruits</span><div class="pname">Mixed Nut Collection</div><p class="pdesc">Almonds, pistachios, walnuts, raisins and apricots &mdash; a luxurious blend perfect for snacking or gifting.</p><span class="pbadge">Gift Ready</span></div>
-    <div class="pc reveal"><span class="pe">&#x1F347;</span><span class="pcat">Dry Fruits</span><div class="pname">Dates &amp; Raisins</div><p class="pdesc">Plump seedless raisins and premium dates &mdash; sun-dried naturally, rich in sweetness and nourishment.</p><span class="pbadge">Daily Wellness</span></div>
-    <div class="pc reveal"><span class="pe">&#x1F370;</span><span class="pcat">Cake Mixes</span><div class="pname">Kerala Plum Cake Mix</div><p class="pdesc">Signature Kerala-style plum cake mix loaded with dry fruits and warming spices. Just add eggs and butter.</p><span class="pbadge">Seasonal Favourite</span></div>
-    <div class="pc reveal"><span class="pe">&#x1F9C1;</span><span class="pcat">Cake Mixes</span><div class="pname">Vanilla &amp; Chocolate Mixes</div><p class="pdesc">Soft, moist sponge cake mixes in classic vanilla and rich chocolate. Easy home baking guaranteed.</p><span class="pbadge">Family Choice</span></div>
-    <div class="pc reveal"><span class="pe">&#x1F36B;</span><span class="pcat">Chocolates</span><div class="pname">Imported Chocolates</div><p class="pdesc">A curated selection of premium international chocolates &mdash; perfect as standalone gifts or inside hampers.</p><span class="pbadge">Premium Import</span></div>
+
+    <div class="pc reveal">
+      <span class="pe">&#x1FAD8;</span>
+      <span class="pcat">Dry Fruits</span>
+      <div class="pname">Premium Cashews</div>
+      <p class="pdesc">W240 grade whole cashews, roasted to golden perfection. Naturally creamy, rich, and beloved across Kerala.</p>
+      <span class="pbadge">Best Seller</span>
+    </div>
+
+    <div class="pc reveal">
+      <span class="pe">&#x1F330;</span>
+      <span class="pcat">Dry Fruits</span>
+      <div class="pname">Mixed Nut Collection</div>
+      <p class="pdesc">Almonds, pistachios, walnuts, raisins and apricots &mdash; a luxurious blend perfect for snacking or gifting.</p>
+      <span class="pbadge">Gift Ready</span>
+    </div>
+
+    <div class="pc reveal">
+      <span class="pe">&#x1F347;</span>
+      <span class="pcat">Dry Fruits</span>
+      <div class="pname">Dates &amp; Raisins</div>
+      <p class="pdesc">Plump seedless raisins and premium dates &mdash; sun-dried naturally, rich in sweetness and nourishment.</p>
+      <span class="pbadge">Daily Wellness</span>
+    </div>
+
+    <div class="pc reveal">
+      <span class="pe">&#x1F370;</span>
+      <span class="pcat">Cake Mixes</span>
+      <div class="pname">Kerala Plum Cake Mix</div>
+      <p class="pdesc">Signature Kerala-style plum cake mix loaded with dry fruits and warming spices. Just add eggs and butter.</p>
+      <span class="pbadge">Seasonal Favourite</span>
+    </div>
+
+    <div class="pc reveal">
+      <span class="pe">&#x1F9C1;</span>
+      <span class="pcat">Cake Mixes</span>
+      <div class="pname">Vanilla &amp; Chocolate Mixes</div>
+      <p class="pdesc">Soft, moist sponge cake mixes in classic vanilla and rich chocolate. Easy home baking guaranteed.</p>
+      <span class="pbadge">Family Choice</span>
+    </div>
+
+    <div class="pc reveal">
+      <span class="pe">&#x1F36B;</span>
+      <span class="pcat">Chocolates</span>
+      <div class="pname">Imported Chocolates</div>
+      <p class="pdesc">A curated selection of premium international chocolates &mdash; perfect as standalone gifts or inside hampers.</p>
+      <span class="pbadge">Premium Import</span>
+    </div>
+
+    <!-- ── NEW: Customised Acrylic Hampers ── -->
+    <div class="pc reveal">
+      <img class="pc-img"
+           src="https://5.imimg.com/data5/SELLER/Default/2023/3/295027353/TS/ZO/IZ/188672726/acrylic-chocolaty-flowers-gifts-hamper-500x500.jpg"
+           alt="Customised Acrylic Hamper"
+           onerror="this.style.background='var(--cream-dark)';this.style.display='none'">
+      <span class="pcat">Acrylic Hampers</span>
+      <div class="pname">Customised Acrylic Hampers</div>
+      <p class="pdesc">Crystal-clear acrylic boxes filled with your choice of dry fruits, chocolates and decor &mdash; a stunning premium gifting experience. Fully customised for any occasion, name, or theme.</p>
+      <span class="pbadge">Bespoke &amp; Luxury</span>
+    </div>
+
+    <!-- ── NEW: Special Cake Mixes ── -->
+    <div class="pc reveal">
+      <img class="pc-img"
+           src="https://5.imimg.com/data5/SELLER/Default/2022/11/TG/OW/HX/3685868/betty-crocker-cake-mix-assorted-flavours-500x500.jpg"
+           alt="Special Cake Mixes"
+           onerror="this.style.background='var(--cream-dark)';this.style.display='none'">
+      <span class="pcat">Cake Mixes</span>
+      <div class="pname">Special Cake Mixes</div>
+      <p class="pdesc">Our premium special cake mixes &mdash; crafted for professional results at home. Available in 11 signature flavours:</p>
+      <ul class="cake-list">
+        <li>Black Forest</li>
+        <li>White Forest</li>
+        <li>Chocolate Truffle</li>
+        <li>Chocolate Ganache</li>
+        <li>Butterscotch</li>
+        <li>Vancho</li>
+        <li>Nutty Bubbles</li>
+        <li>Choco Nutty</li>
+        <li>Ferrero Rocher</li>
+        <li>Pistachio</li>
+        <li>Fruit Cakes</li>
+      </ul>
+      <span class="pbadge">11 Flavours</span>
+    </div>
+
   </div>
 </section>
 
+<!-- HAMPERS -->
 <section id="hampers">
   <div class="hh reveal">
     <span class="stag">Signature Hampers</span>
@@ -273,6 +363,7 @@ footer{background:var(--dark);padding:3rem 5vw 2rem;border-top:1px solid rgba(20
   </div>
 </section>
 
+<!-- OCCASIONS -->
 <div class="occ-sec">
   <div class="occ-head reveal">
     <span class="stag">We Gift for Every Occasion</span>
@@ -294,6 +385,7 @@ footer{background:var(--dark);padding:3rem 5vw 2rem;border-top:1px solid rgba(20
   </div>
 </div>
 
+<!-- DECOR -->
 <section id="decor">
   <div class="decor-in">
     <div class="reveal">
@@ -307,6 +399,8 @@ footer{background:var(--dark);padding:3rem 5vw 2rem;border-top:1px solid rgba(20
         <a href="https://wa.me/917907048430?text=Hello!%20I%20would%20like%20to%20know%20about%20your%20hamper%20decor%20and%20accessories." target="_blank" class="btn-gold">Enquire About Decor Items</a>
       </div>
     </div>
+
+    <!-- ── UPDATED: 9 decor items (3×3) — added Balloons + Acrylic Cake Toppers ── -->
     <div class="dg reveal">
       <div class="di"><span class="dicon">&#x1F490;</span><div class="dname">Artificial Flowers</div><p class="ddesc">Silk &amp; fabric blooms in various colours</p></div>
       <div class="di"><span class="dicon">&#x1F4E6;</span><div class="dname">Kit Boxes</div><p class="ddesc">Designer boxes in multiple sizes &amp; styles</p></div>
@@ -314,23 +408,29 @@ footer{background:var(--dark);padding:3rem 5vw 2rem;border-top:1px solid rgba(20
       <div class="di"><span class="dicon">&#x1F380;</span><div class="dname">Ribbons &amp; Bows</div><p class="ddesc">Satin, organza wraps &amp; gift bows</p></div>
       <div class="di"><span class="dicon">&#x2709;&#xFE0F;</span><div class="dname">Gift Cards</div><p class="ddesc">Personalised message cards</p></div>
       <div class="di"><span class="dicon">&#x1F56F;&#xFE0F;</span><div class="dname">Candles &amp; Fillers</div><p class="ddesc">Candles, shred fillers &amp; tissue paper</p></div>
+      <!-- NEW -->
+      <div class="di"><span class="dicon">&#x1F388;</span><div class="dname">Balloons</div><p class="ddesc">Latex &amp; foil balloons for all celebrations</p></div>
+      <div class="di"><span class="dicon">&#x1FA84;</span><div class="dname">Acrylic Cake Toppers</div><p class="ddesc">Customised acrylic greeting cake toppers</p></div>
+      <div class="di"><span class="dicon">&#x2728;</span><div class="dname">Custom Add-ons</div><p class="ddesc">Bespoke finishing for every hamper</p></div>
     </div>
   </div>
 </section>
 
+<!-- ABOUT -->
 <section id="about">
   <div class="about-in">
     <div class="reveal">
       <span class="stag">Our Story</span>
       <h2 class="stitle">Rooted in <em>Kannur,</em><br>Crafted with Care</h2>
       <div class="abody">
-        <p>Freshouse Kannur was born from a simple belief &mdash; that the finest gifts come from nature itself. Located in the heart of Kannur, Kerala, we source the freshest dry fruits, craft premium cake mixes, and curate extraordinary gift hampers for every occasion.</p>
+        <!-- ── UPDATED: Founded 2017 ── -->
+        <p>Founded in 2017, Freshouse Kannur has been Kannur's most trusted destination for premium dry fruits, artisan cake mixes and beautifully crafted gift hampers. What began as a passion for quality has grown into a beloved local brand serving thousands of happy customers across Kerala.</p>
         <p>From premium nuts to bespoke engagement kits and birthday hampers, every product we offer is handpicked, quality-checked, and presented beautifully &mdash; because your special moments deserve nothing less.</p>
       </div>
       <div class="astats">
-        <div><div class="stn">15000+</div><div class="stl">Happy Customers</div></div>
+        <div><div class="stn">15k+</div><div class="stl">Happy Customers</div></div>
         <div><div class="stn">500+</div><div class="stl">Products</div></div>
-        <div><div class="stn">100%</div><div class="stl">Natural &amp; Pure</div></div>
+        <div><div class="stn" style="font-size:2rem">Since 2017</div><div class="stl">Serving Kannur</div></div>
         <div><div class="stn">5&#x2605;</div><div class="stl">Customer Rating</div></div>
       </div>
     </div>
@@ -343,6 +443,7 @@ footer{background:var(--dark);padding:3rem 5vw 2rem;border-top:1px solid rgba(20
   </div>
 </section>
 
+<!-- CONTACT -->
 <section id="contact">
   <div class="cin">
     <div class="reveal">
@@ -356,36 +457,28 @@ footer{background:var(--dark);padding:3rem 5vw 2rem;border-top:1px solid rgba(20
         </li>
         <li>
           <div class="ciicon">&#x1F4DE;</div>
-          <div class="cidetail"><strong>Phone / WhatsApp</strong>+91 96331 27863<br>+91 79070 48430<br><small style="font-size:.75rem;color:var(--text-muted)">(Update with real number)</small></div>
+          <div class="cidetail"><strong>Phone / WhatsApp</strong>+91 96331 27863<br>+91 79070 48430</div>
         </li>
         <li>
           <div class="ciicon">&#x1F550;</div>
-          
-          <!-- Store Hours Block -->
-<div class="cidetail1">
-  <strong>Store Hours</strong><br>
-  Mon – Sat: 9:00 AM – 8:00 PM<br>
-  Sunday: 10:00 AM – 5:00 PM
-</div>
-
-<!-- Instagram Section (separate block BELOW store hours) -->
-<div style="margin-top:1rem; margin-bottom:1rem;">
-  <a href="https://www.instagram.com/freshouse_kannur/?hl=en" target="_blank"
-     style="display:flex;align-items:center;gap:0.8rem;color:var(--gold);text-decoration:none;font-size:1.1rem;">
-
-    <!-- Larger Instagram Icon -->
-    <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34"
-         viewBox="0 0 24 24" fill="none" stroke="currentColor"
-         stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-      <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-      <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-      <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
-    </svg>
-
-    <span style="font-size:1.1rem;">Instagram</span>
-  </a>
-</div>
-
+          <div class="cidetail1">
+            <strong>Store Hours</strong><br>
+            Mon &ndash; Sat: 9:00 AM &ndash; 8:00 PM<br>
+            Sunday: 10:00 AM &ndash; 5:00 PM
+          </div>
+          <div style="margin-top:1rem;margin-bottom:1rem">
+            <a href="https://www.instagram.com/freshouse_kannur/?hl=en" target="_blank"
+               style="display:flex;align-items:center;gap:0.8rem;color:var(--gold);text-decoration:none;font-size:1.1rem;">
+              <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34"
+                   viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                   stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+              </svg>
+              <span style="font-size:1.1rem;">Instagram</span>
+            </a>
+          </div>
         </li>
       </ul>
       <a href="https://wa.me/917907048430?text=Hello%20Freshouse%20Kannur!%20I%20would%20like%20to%20place%20an%20order." target="_blank" class="wabtn">&#x1F4AC; Chat on WhatsApp</a>
@@ -409,10 +502,14 @@ footer{background:var(--dark);padding:3rem 5vw 2rem;border-top:1px solid rgba(20
           <option>Christmas Hamper</option>
           <option>Corporate Gift</option>
           <option>Custom Hamper</option>
+          <option>Customised Acrylic Hamper</option>
           <option>Dry Fruits Only</option>
           <option>Cake Mixes</option>
+          <option>Special Cake Mixes</option>
           <option>Imported Chocolates</option>
           <option>Decor / Accessories</option>
+          <option>Acrylic Cake Toppers</option>
+          <option>Balloons</option>
           <option>Other</option>
         </select>
       </div>
@@ -426,7 +523,7 @@ footer{background:var(--dark);padding:3rem 5vw 2rem;border-top:1px solid rgba(20
   <div class="ftop">
     <div>
       <div class="flogo">Freshouse <span>Kannur</span></div>
-      <div class="ftagline">Premium Dry Fruits &middot; Cake Mixes &middot; Gift Hampers &middot; Kannur, Kerala</div>
+      <div class="ftagline">Premium Dry Fruits &middot; Cake Mixes &middot; Gift Hampers &middot; Kannur, Kerala &middot; Since 2017</div>
       <div class="flinks">
         <a href="#home">Home</a><a href="#products">Products</a><a href="#hampers">Hampers</a><a href="#decor">Decor</a><a href="#about">About</a><a href="#contact">Contact</a>
       </div>
@@ -436,7 +533,7 @@ footer{background:var(--dark);padding:3rem 5vw 2rem;border-top:1px solid rgba(20
       <div style="font-size:.65rem;color:rgba(200,169,110,.28);margin-top:.8rem;letter-spacing:.12em">Kannur, Kerala, India</div>
     </div>
   </div>
-  <div class="fbot">&copy; 2025 Freshouse Kannur &middot; All rights reserved &middot; Crafted with love in Kerala</div>
+  <div class="fbot">&copy; 2025 Freshouse Kannur &middot; All rights reserved &middot; Crafted with love in Kerala since 2017</div>
 </footer>
 
 <script>
