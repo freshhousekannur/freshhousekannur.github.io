@@ -151,6 +151,20 @@ footer{background:var(--dark);padding:3rem 5vw 2rem;border-top:1px solid rgba(20
 @keyframes spinSlow{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}
 .reveal{opacity:0;transform:translateY(28px);transition:opacity .8s ease,transform .8s ease}
 .reveal.visible{opacity:1;transform:none}
+/* Clickable card styles */
+.pc,.hcard,.ocard,.di{cursor:pointer;position:relative}
+.pc .wa-hint,.hcard .wa-hint,.ocard .wa-hint,.di .wa-hint{
+  position:absolute;bottom:0;left:0;right:0;
+  background:rgba(37,211,102,0.92);
+  color:#fff;font-size:.62rem;letter-spacing:.16em;text-transform:uppercase;
+  font-weight:500;padding:.55rem;text-align:center;
+  opacity:0;transform:translateY(6px);
+  transition:opacity .25s,transform .25s;
+  pointer-events:none;
+}
+.pc:hover .wa-hint,.hcard:hover .wa-hint,.ocard:hover .wa-hint,.di:hover .wa-hint{
+  opacity:1;transform:translateY(0);
+}
 @media(max-width:1000px){.hero-float{display:none}.about-in,.cin,.decor-in{grid-template-columns:1fr;gap:3rem}.hero-content{max-width:100%}}
 @media(max-width:600px){.nav-links{display:none}section{padding:3.5rem 5vw}.astats{grid-template-columns:1fr 1fr}.afeats{grid-template-columns:1fr 1fr}.dg{grid-template-columns:1fr 1fr}.occ-grid{grid-template-columns:repeat(3,1fr)}.cake-list{grid-template-columns:1fr}}
 </style>
@@ -230,56 +244,62 @@ footer{background:var(--dark);padding:3rem 5vw 2rem;border-top:1px solid rgba(20
   </div>
   <div class="pg">
 
-    <div class="pc reveal">
+    <div class="pc reveal" onclick="waClick('cashews')">
       <span class="pe">&#x1FAD8;</span>
       <span class="pcat">Dry Fruits</span>
       <div class="pname">Premium Cashews</div>
       <p class="pdesc">W240 grade whole cashews, roasted to golden perfection. Naturally creamy, rich, and beloved across Kerala.</p>
       <span class="pbadge">Best Seller</span>
+      <div class="wa-hint">💬 Enquire on WhatsApp</div>
     </div>
 
-    <div class="pc reveal">
+    <div class="pc reveal" onclick="waClick('mixednuts')">
       <span class="pe">&#x1F330;</span>
       <span class="pcat">Dry Fruits</span>
       <div class="pname">Mixed Nut Collection</div>
       <p class="pdesc">Almonds, pistachios, walnuts, raisins and apricots &mdash; a luxurious blend perfect for snacking or gifting.</p>
       <span class="pbadge">Gift Ready</span>
+      <div class="wa-hint">💬 Enquire on WhatsApp</div>
     </div>
 
-    <div class="pc reveal">
+    <div class="pc reveal" onclick="waClick('dates')">
       <span class="pe">&#x1F347;</span>
       <span class="pcat">Dry Fruits</span>
       <div class="pname">Dates &amp; Raisins</div>
       <p class="pdesc">Plump seedless raisins and premium dates &mdash; sun-dried naturally, rich in sweetness and nourishment.</p>
       <span class="pbadge">Daily Wellness</span>
+      <div class="wa-hint">💬 Enquire on WhatsApp</div>
     </div>
 
-    <div class="pc reveal">
+    <div class="pc reveal" onclick="waClick('plumcake')">
       <span class="pe">&#x1F370;</span>
       <span class="pcat">Cake Mixes</span>
       <div class="pname">Kerala Plum Cake Mix</div>
       <p class="pdesc">Signature Kerala-style plum cake mix loaded with dry fruits and warming spices. Just add eggs and butter.</p>
       <span class="pbadge">Seasonal Favourite</span>
+      <div class="wa-hint">💬 Enquire on WhatsApp</div>
     </div>
 
-    <div class="pc reveal">
+    <div class="pc reveal" onclick="waClick('vanillachoc')">
       <span class="pe">&#x1F9C1;</span>
       <span class="pcat">Cake Mixes</span>
       <div class="pname">Vanilla &amp; Chocolate Mixes</div>
       <p class="pdesc">Soft, moist sponge cake mixes in classic vanilla and rich chocolate. Easy home baking guaranteed.</p>
       <span class="pbadge">Family Choice</span>
+      <div class="wa-hint">💬 Enquire on WhatsApp</div>
     </div>
 
-    <div class="pc reveal">
+    <div class="pc reveal" onclick="waClick('chocolates')">
       <span class="pe">&#x1F36B;</span>
       <span class="pcat">Chocolates</span>
       <div class="pname">Imported Chocolates</div>
       <p class="pdesc">A curated selection of premium international chocolates &mdash; perfect as standalone gifts or inside hampers.</p>
       <span class="pbadge">Premium Import</span>
+      <div class="wa-hint">💬 Enquire on WhatsApp</div>
     </div>
 
     <!-- ── NEW: Customised Acrylic Hampers ── -->
-    <div class="pc reveal">
+    <div class="pc reveal" onclick="waClick('acrylichamper')">
       <img class="pc-img"
            src="https://5.imimg.com/data5/SELLER/Default/2023/3/295027353/TS/ZO/IZ/188672726/acrylic-chocolaty-flowers-gifts-hamper-500x500.jpg"
            alt="Customised Acrylic Hamper"
@@ -288,10 +308,11 @@ footer{background:var(--dark);padding:3rem 5vw 2rem;border-top:1px solid rgba(20
       <div class="pname">Customised Acrylic Hampers</div>
       <p class="pdesc">Crystal-clear acrylic boxes filled with your choice of dry fruits, chocolates and decor &mdash; a stunning premium gifting experience. Fully customised for any occasion, name, or theme.</p>
       <span class="pbadge">Bespoke &amp; Luxury</span>
+      <div class="wa-hint">💬 Enquire on WhatsApp</div>
     </div>
 
     <!-- ── NEW: Special Cake Mixes ── -->
-    <div class="pc reveal">
+    <div class="pc reveal" onclick="waClick('specialcake')">
       <img class="pc-img"
            src="https://5.imimg.com/data5/SELLER/Default/2022/11/TG/OW/HX/3685868/betty-crocker-cake-mix-assorted-flavours-500x500.jpg"
            alt="Special Cake Mixes"
@@ -313,6 +334,7 @@ footer{background:var(--dark);padding:3rem 5vw 2rem;border-top:1px solid rgba(20
         <li>Fruit Cakes</li>
       </ul>
       <span class="pbadge">11 Flavours</span>
+      <div class="wa-hint">💬 Enquire on WhatsApp</div>
     </div>
 
   </div>
@@ -326,36 +348,42 @@ footer{background:var(--dark);padding:3rem 5vw 2rem;border-top:1px solid rgba(20
     <p>Lovingly assembled with premium ingredients, beautiful packaging, and all the extras that make a gift truly unforgettable.</p>
   </div>
   <div class="hg">
-    <div class="hcard hfeat reveal">
+    <div class="hcard hfeat reveal" onclick="waClick('engagement')">
       <span class="hpop">Most Popular</span>
       <div class="htop"><div class="hicon">&#x1F48D;</div><div><span class="hlabel">Celebration Hamper</span><div class="hname">Engagement Kit</div></div></div>
       <p class="hdesc">A beautifully curated engagement hamper to make the moment truly special. Luxuriously packed in a designer kit box with everything needed for the occasion.</p>
       <div class="hinc"><span class="hi">Premium Dry Fruits</span><span class="hi">Imported Chocolates</span><span class="hi">Artificial Flowers</span><span class="hi">Designer Kit Box</span><span class="hi">Ribbon &amp; Decor</span></div>
+      <div class="wa-hint">💬 Enquire on WhatsApp</div>
     </div>
-    <div class="hcard reveal">
+    <div class="hcard reveal" onclick="waClick('birthday')">
       <div class="htop"><div class="hicon">&#x1F382;</div><div><span class="hlabel">Celebration Hamper</span><div class="hname">Birthday Hampers / Anniversary Hampers</div></div></div>
       <p class="hdesc">Make every birthday memorable with a premium hamper packed with sweets, dry fruits, chocolates and personalised surprises.</p>
       <div class="hinc"><span class="hi">Dry Fruits Box</span><span class="hi">Chocolates</span><span class="hi">Cake Mix</span><span class="hi">Gift Box</span><span class="hi">Message Card</span></div>
+      <div class="wa-hint">💬 Enquire on WhatsApp</div>
     </div>
-    <div class="hcard reveal">
+    <div class="hcard reveal" onclick="waClick('wedding')">
       <div class="htop"><div class="hicon">&#x1F492;</div><div><span class="hlabel">Wedding Hamper</span><div class="hname">Wedding Gift Box</div></div></div>
       <p class="hdesc">Elegant wedding gifts that symbolise health, prosperity and happiness &mdash; beautifully presented for the couple's special day.</p>
       <div class="hinc"><span class="hi">Luxury Nuts</span><span class="hi">Dates &amp; Figs</span><span class="hi">Chocolates</span><span class="hi">Floral Decor</span></div>
+      <div class="wa-hint">💬 Enquire on WhatsApp</div>
     </div>
-    <div class="hcard reveal">
+    <div class="hcard reveal" onclick="waClick('onameid')">
       <div class="htop"><div class="hicon">&#x1F338;</div><div><span class="hlabel">Festive Hamper</span><div class="hname">Onam &amp; Eid Special</div></div></div>
       <p class="hdesc">Celebrate Kerala's most beloved festivals with a lavish hamper full of the finest dry fruits and traditional treats.</p>
       <div class="hinc"><span class="hi">Mixed Nuts Tray</span><span class="hi">Dates &amp; Raisins</span><span class="hi">Sweets</span><span class="hi">Decorative Box</span></div>
+      <div class="wa-hint">💬 Enquire on WhatsApp</div>
     </div>
-    <div class="hcard reveal">
+    <div class="hcard reveal" onclick="waClick('corporate')">
       <div class="htop"><div class="hicon">&#x1F3E2;</div><div><span class="hlabel">Corporate Hamper</span><div class="hname">Corporate Gift Box</div></div></div>
       <p class="hdesc">Professional, elegant hampers ideal for employee appreciation, client gifting and company milestone celebrations.</p>
       <div class="hinc"><span class="hi">Premium Nuts</span><span class="hi">Imported Choc</span><span class="hi">Branded Box</span><span class="hi">Custom Logo</span></div>
+      <div class="wa-hint">💬 Enquire on WhatsApp</div>
     </div>
-    <div class="hcard reveal">
+    <div class="hcard reveal" onclick="waClick('custom')">
       <div class="htop"><div class="hicon">&#x2728;</div><div><span class="hlabel">Custom Hamper</span><div class="hname">Build Your Own</div></div></div>
       <p class="hdesc">Have something specific in mind? We'll build it. Choose your items, box style, flowers and decorations &mdash; fully personalised.</p>
       <div class="hinc"><span class="hi">You Choose</span><span class="hi">Any Occasion</span><span class="hi">Any Budget</span><span class="hi">WhatsApp Us</span></div>
+      <div class="wa-hint">💬 Enquire on WhatsApp</div>
     </div>
   </div>
   <div style="text-align:center;margin-top:3rem">
@@ -370,18 +398,18 @@ footer{background:var(--dark);padding:3rem 5vw 2rem;border-top:1px solid rgba(20
     <h3>From <em>Milestones</em> to Moments</h3>
   </div>
   <div class="occ-grid reveal">
-    <div class="ocard"><span class="oicon">&#x1F48D;</span><span class="oname">Engagement</span></div>
-    <div class="ocard"><span class="oicon">&#x1F382;</span><span class="oname">Birthday</span></div>
-    <div class="ocard"><span class="oicon">&#x1F492;</span><span class="oname">Wedding</span></div>
-    <div class="ocard"><span class="oicon">&#x1F319;</span><span class="oname">Eid</span></div>
-    <div class="ocard"><span class="oicon">&#x1F338;</span><span class="oname">Onam</span></div>
-    <div class="ocard"><span class="oicon">&#x1F384;</span><span class="oname">Christmas</span></div>
-    <div class="ocard"><span class="oicon">&#x1FA94;</span><span class="oname">Diwali</span></div>
-    <div class="ocard"><span class="oicon">&#x1F3E2;</span><span class="oname">Corporate</span></div>
-    <div class="ocard"><span class="oicon">&#x1F476;</span><span class="oname">Baby Shower</span></div>
-    <div class="ocard"><span class="oicon">&#x1F393;</span><span class="oname">Graduation</span></div>
-    <div class="ocard"><span class="oicon">&#x1F49D;</span><span class="oname">Anniversary</span></div>
-    <div class="ocard"><span class="oicon">&#x1F64F;</span><span class="oname">Housewarming</span></div>
+    <div class="ocard" onclick="waClick('occ-engagement')"><span class="oicon">&#x1F48D;</span><span class="oname">Engagement</span><div class="wa-hint">💬 WhatsApp</div></div>
+    <div class="ocard" onclick="waClick('occ-birthday')"><span class="oicon">&#x1F382;</span><span class="oname">Birthday</span><div class="wa-hint">💬 WhatsApp</div></div>
+    <div class="ocard" onclick="waClick('occ-wedding')"><span class="oicon">&#x1F492;</span><span class="oname">Wedding</span><div class="wa-hint">💬 WhatsApp</div></div>
+    <div class="ocard" onclick="waClick('occ-eid')"><span class="oicon">&#x1F319;</span><span class="oname">Eid</span><div class="wa-hint">💬 WhatsApp</div></div>
+    <div class="ocard" onclick="waClick('occ-onam')"><span class="oicon">&#x1F338;</span><span class="oname">Onam</span><div class="wa-hint">💬 WhatsApp</div></div>
+    <div class="ocard" onclick="waClick('occ-christmas')"><span class="oicon">&#x1F384;</span><span class="oname">Christmas</span><div class="wa-hint">💬 WhatsApp</div></div>
+    <div class="ocard" onclick="waClick('occ-diwali')"><span class="oicon">&#x1FA94;</span><span class="oname">Diwali</span><div class="wa-hint">💬 WhatsApp</div></div>
+    <div class="ocard" onclick="waClick('occ-corporate')"><span class="oicon">&#x1F3E2;</span><span class="oname">Corporate</span><div class="wa-hint">💬 WhatsApp</div></div>
+    <div class="ocard" onclick="waClick('occ-babyshower')"><span class="oicon">&#x1F476;</span><span class="oname">Baby Shower</span><div class="wa-hint">💬 WhatsApp</div></div>
+    <div class="ocard" onclick="waClick('occ-graduation')"><span class="oicon">&#x1F393;</span><span class="oname">Graduation</span><div class="wa-hint">💬 WhatsApp</div></div>
+    <div class="ocard" onclick="waClick('occ-anniversary')"><span class="oicon">&#x1F49D;</span><span class="oname">Anniversary</span><div class="wa-hint">💬 WhatsApp</div></div>
+    <div class="ocard" onclick="waClick('occ-housewarming')"><span class="oicon">&#x1F64F;</span><span class="oname">Housewarming</span><div class="wa-hint">💬 WhatsApp</div></div>
   </div>
 </div>
 
@@ -402,16 +430,16 @@ footer{background:var(--dark);padding:3rem 5vw 2rem;border-top:1px solid rgba(20
 
     <!-- ── UPDATED: 9 decor items (3×3) — added Balloons + Acrylic Cake Toppers ── -->
     <div class="dg reveal">
-      <div class="di"><span class="dicon">&#x1F490;</span><div class="dname">Artificial Flowers</div><p class="ddesc">Silk &amp; fabric blooms in various colours</p></div>
-      <div class="di"><span class="dicon">&#x1F4E6;</span><div class="dname">Kit Boxes</div><p class="ddesc">Designer boxes in multiple sizes &amp; styles</p></div>
-      <div class="di"><span class="dicon">&#x1F36B;</span><div class="dname">Imported Chocolates</div><p class="ddesc">Premium international brands</p></div>
-      <div class="di"><span class="dicon">&#x1F380;</span><div class="dname">Ribbons &amp; Bows</div><p class="ddesc">Satin, organza wraps &amp; gift bows</p></div>
-      <div class="di"><span class="dicon">&#x2709;&#xFE0F;</span><div class="dname">Gift Cards</div><p class="ddesc">Personalised message cards</p></div>
-      <div class="di"><span class="dicon">&#x1F56F;&#xFE0F;</span><div class="dname">Candles &amp; Fillers</div><p class="ddesc">Candles, shred fillers &amp; tissue paper</p></div>
+      <div class="di" onclick="waClick('decor-flowers')"><span class="dicon">&#x1F490;</span><div class="dname">Artificial Flowers</div><p class="ddesc">Silk &amp; fabric blooms in various colours</p><div class="wa-hint">💬 WhatsApp</div></div>
+      <div class="di" onclick="waClick('decor-kitbox')"><span class="dicon">&#x1F4E6;</span><div class="dname">Kit Boxes</div><p class="ddesc">Designer boxes in multiple sizes &amp; styles</p><div class="wa-hint">💬 WhatsApp</div></div>
+      <div class="di" onclick="waClick('decor-choc')"><span class="dicon">&#x1F36B;</span><div class="dname">Imported Chocolates</div><p class="ddesc">Premium international brands</p><div class="wa-hint">💬 WhatsApp</div></div>
+      <div class="di" onclick="waClick('decor-ribbon')"><span class="dicon">&#x1F380;</span><div class="dname">Ribbons &amp; Bows</div><p class="ddesc">Satin, organza wraps &amp; gift bows</p><div class="wa-hint">💬 WhatsApp</div></div>
+      <div class="di" onclick="waClick('decor-cards')"><span class="dicon">&#x2709;&#xFE0F;</span><div class="dname">Gift Cards</div><p class="ddesc">Personalised message cards</p><div class="wa-hint">💬 WhatsApp</div></div>
+      <div class="di" onclick="waClick('decor-candles')"><span class="dicon">&#x1F56F;&#xFE0F;</span><div class="dname">Candles &amp; Fillers</div><p class="ddesc">Candles, shred fillers &amp; tissue paper</p><div class="wa-hint">💬 WhatsApp</div></div>
       <!-- NEW -->
-      <div class="di"><span class="dicon">&#x1F388;</span><div class="dname">Balloons</div><p class="ddesc">Latex &amp; foil balloons for all celebrations</p></div>
-      <div class="di"><span class="dicon">&#x1FA84;</span><div class="dname">Acrylic Cake Toppers</div><p class="ddesc">Customised acrylic greeting cake toppers</p></div>
-      <div class="di"><span class="dicon">&#x2728;</span><div class="dname">Custom Add-ons</div><p class="ddesc">Bespoke finishing for every hamper</p></div>
+      <div class="di" onclick="waClick('decor-balloons')"><span class="dicon">&#x1F388;</span><div class="dname">Balloons</div><p class="ddesc">Latex &amp; foil balloons for all celebrations</p><div class="wa-hint">💬 WhatsApp</div></div>
+      <div class="di" onclick="waClick('decor-toppers')"><span class="dicon">&#x1FA84;</span><div class="dname">Acrylic Cake Toppers</div><p class="ddesc">Customised acrylic greeting cake toppers</p><div class="wa-hint">💬 WhatsApp</div></div>
+      <div class="di" onclick="waClick('decor-custom')"><span class="dicon">&#x2728;</span><div class="dname">Custom Add-ons</div><p class="ddesc">Bespoke finishing for every hamper</p><div class="wa-hint">💬 WhatsApp</div></div>
     </div>
   </div>
 </section>
@@ -539,6 +567,51 @@ footer{background:var(--dark);padding:3rem 5vw 2rem;border-top:1px solid rgba(20
 <script>
 const obs=new IntersectionObserver((entries)=>{entries.forEach((e,i)=>{if(e.isIntersecting){setTimeout(()=>e.target.classList.add('visible'),i*70);obs.unobserve(e.target)}})},{threshold:0.1});
 document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+
+/* ── WhatsApp draft messages per item ── */
+const waMsgs = {
+  'cashews':        'Hello Freshouse Kannur! 👋\n\nI came across your Premium Cashews on your website and I\'m interested in placing an order.\n\nCould you please share the available quantities, pricing, and packaging options?\n\nThank you! 🙏',
+  'mixednuts':      'Hello Freshouse Kannur! 👋\n\nI\'m interested in your Royal Mixed Nut Collection.\n\nCould you please let me know the available sizes, pricing, and if gift packaging is available?\n\nLooking forward to your reply! 😊',
+  'dates':          'Hello Freshouse Kannur! 👋\n\nI would like to enquire about your Dates & Raisins.\n\nCould you share the available varieties, weights, and pricing details?\n\nThank you!',
+  'plumcake':       'Hello Freshouse Kannur! 👋\n\nI\'m very interested in your Kerala Plum Cake Mix!\n\nCould you please share the pack sizes, pricing, and if it\'s currently available?\n\nThanks a lot! 🎂',
+  'vanillachoc':    'Hello Freshouse Kannur! 👋\n\nI\'d like to know more about your Vanilla & Chocolate Cake Mixes.\n\nCould you share the available flavours, pack sizes, and pricing?\n\nLooking forward to hearing from you! 🧁',
+  'chocolates':     'Hello Freshouse Kannur! 👋\n\nI saw your Imported Chocolates collection on your website and I\'m interested!\n\nCould you please share the brands available, pricing, and if they can be added to a gift hamper?\n\nThank you! 🍫',
+  'acrylichamper':  'Hello Freshouse Kannur! 👋\n\nI\'m very interested in your Customised Acrylic Hampers!\n\nCould you please share more details about the sizes available, what can be included inside, pricing, and how I can customise it for my occasion?\n\nLooking forward to your reply! 🎁✨',
+  'specialcake':    'Hello Freshouse Kannur! 👋\n\nI came across your Special Cake Mixes and I\'m interested in placing an order.\n\nCould you please share the available flavours, pack sizes, and pricing? I\'d especially love to know more about the options available.\n\nThank you! 🎂',
+  'engagement':     'Hello Freshouse Kannur! 💍\n\nI\'m looking for a beautiful Engagement Kit for an upcoming engagement ceremony.\n\nCould you please share the available options, what\'s included in the kit, pricing, and if customisation is possible?\n\nLooking forward to making this moment extra special! 🌸',
+  'birthday':       'Hello Freshouse Kannur! 🎂\n\nI\'m looking for a special Birthday Hamper / Anniversary Hamper as a gift.\n\nCould you please share the available options, what\'s included, pricing, and delivery availability in Kannur?\n\nThank you! 🎉',
+  'wedding':        'Hello Freshouse Kannur! 💒\n\nI\'m interested in a Wedding Gift Box for an upcoming wedding.\n\nCould you please share the available options, customisation possibilities, and pricing?\n\nWould love to make it a truly memorable gift! 🌺',
+  'onameid':        'Hello Freshouse Kannur! 🌸\n\nI\'m looking for a beautiful Onam / Eid Special Hamper for the upcoming festivities.\n\nCould you please share the hamper options, contents, and pricing?\n\nLooking forward to celebrating with the best! 🎊',
+  'corporate':      'Hello Freshouse Kannur! 🏢\n\nI\'m interested in Corporate Gift Hampers for our team / clients.\n\nCould you please share details on bulk order options, customisation with our branding, pricing, and delivery?\n\nThank you!',
+  'custom':         'Hello Freshouse Kannur! ✨\n\nI\'d like to build a fully customised gift hamper.\n\nCould you please help me put together something special? I\'d love to discuss the items, box styles, decorations, and budget.\n\nLooking forward to creating something beautiful! 🎁',
+  'occ-engagement': 'Hello Freshouse Kannur! 💍\n\nI\'m looking for a special gift hamper for an upcoming Engagement ceremony.\n\nCould you please share the available Engagement Kit options, what\'s included, and pricing?\n\nThank you! 🌸',
+  'occ-birthday':   'Hello Freshouse Kannur! 🎂\n\nI\'m planning a birthday celebration and would love a special Birthday Hamper.\n\nCould you please share the available options, what\'s included, and pricing?\n\nExcited to make it memorable! 🎉',
+  'occ-wedding':    'Hello Freshouse Kannur! 💒\n\nI need a beautiful Wedding Gift for an upcoming wedding.\n\nCould you share the wedding gift hamper options, customisation, and pricing?\n\nThank you! 🌺',
+  'occ-eid':        'Hello Freshouse Kannur! 🌙\n\nEid Mubarak! I\'m looking for a special Eid Hamper as a gift.\n\nCould you please share the Eid hamper options, what\'s included, and pricing?\n\nJazakallah Khair! 🤲',
+  'occ-onam':       'Hello Freshouse Kannur! 🌸\n\nOnam Ashamsakal! I\'m looking for a lovely Onam Hamper.\n\nCould you please share the available options, contents, and pricing?\n\nLooking forward to celebrating with the best from Kannur! 🌼',
+  'occ-christmas':  'Hello Freshouse Kannur! 🎄\n\nChristmas Greetings! I\'m looking for a special Christmas Hamper.\n\nCould you please share the Christmas gift options, contents, and pricing?\n\nMerry Christmas in advance! 🎁',
+  'occ-diwali':     'Hello Freshouse Kannur! 🪔\n\nHappy Diwali! I\'m looking for a beautiful Diwali Gift Hamper.\n\nCould you please share the available options, contents, and pricing?\n\nThank you! ✨',
+  'occ-corporate':  'Hello Freshouse Kannur! 🏢\n\nI\'m planning Corporate Gifting for our organisation.\n\nCould you please share bulk order options, customisation with branding, and pricing for corporate hampers?\n\nThank you!',
+  'occ-babyshower': 'Hello Freshouse Kannur! 👶\n\nI\'m looking for a special Baby Shower Gift Hamper.\n\nCould you please share the available options, what can be included, and pricing?\n\nWould love something sweet and memorable! 🍼',
+  'occ-graduation': 'Hello Freshouse Kannur! 🎓\n\nI\'m looking for a special Graduation Gift Hamper.\n\nCould you please share the available options, contents, and pricing?\n\nWant to make this achievement celebration extra special! 🌟',
+  'occ-anniversary':'Hello Freshouse Kannur! 💝\n\nI\'m looking for a beautiful Anniversary Gift Hamper.\n\nCould you please share the available options, customisation, and pricing?\n\nWant to make this anniversary truly unforgettable! 🌹',
+  'occ-housewarming':'Hello Freshouse Kannur! 🏠\n\nI\'m looking for a Housewarming Gift Hamper for a friend\'s new home.\n\nCould you please share the available options, what\'s included, and pricing?\n\nThank you! 🌿',
+  'decor-flowers':  'Hello Freshouse Kannur! 🌸\n\nI\'m interested in your Artificial Flower arrangements for a gift hamper.\n\nCould you please share the available designs, colours, sizes, and pricing?\n\nThank you!',
+  'decor-kitbox':   'Hello Freshouse Kannur! 📦\n\nI\'m looking for decorative Kit Boxes for gift hamper packaging.\n\nCould you please share the available sizes, styles, and pricing?\n\nThank you! ✨',
+  'decor-choc':     'Hello Freshouse Kannur! 🍫\n\nI\'d like to add Imported Chocolates to a gift hamper.\n\nCould you share the available brands, assortments, and pricing?\n\nThank you!',
+  'decor-ribbon':   'Hello Freshouse Kannur! 🎀\n\nI\'m interested in your Ribbons, Bows, and gift wrapping accessories.\n\nCould you please share the available options and pricing?\n\nThank you!',
+  'decor-cards':    'Hello Freshouse Kannur! ✉️\n\nI\'d like to add a personalised Gift Card to my order.\n\nCould you please share the customisation options and pricing?\n\nThank you!',
+  'decor-candles':  'Hello Freshouse Kannur! 🕯️\n\nI\'m interested in your Candles and Hamper Fillers.\n\nCould you please share the available options and pricing?\n\nThank you!',
+  'decor-balloons': 'Hello Freshouse Kannur! 🎈\n\nI\'m looking for Balloons for a celebration.\n\nCould you please share the available types (latex/foil), colours, sizes, and pricing?\n\nThank you! 🎉',
+  'decor-toppers':  'Hello Freshouse Kannur! 🎂\n\nI\'m interested in your Customised Acrylic Greeting Cake Toppers!\n\nCould you please share the customisation options (name, message, design), sizes available, and pricing?\n\nLooking forward to your reply! ✨',
+  'decor-custom':   'Hello Freshouse Kannur! ✨\n\nI\'d like to enquire about custom add-ons and bespoke finishing for a gift hamper.\n\nCould you please share what options are available and how we can personalise it?\n\nThank you! 🎁'
+};
+
+function waClick(key) {
+  const msg = waMsgs[key] || 'Hello Freshouse Kannur! 👋\n\nI visited your website and would like to know more about your products. Could you please help me?\n\nThank you!';
+  window.open('https://wa.me/917907048430?text=' + encodeURIComponent(msg), '_blank');
+}
+
 function sendWA(){
   const n=document.getElementById('fn').value.trim();
   const p=document.getElementById('fp').value.trim();
